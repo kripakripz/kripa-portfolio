@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0A0A0C;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #FF2D3D;
+  color: #fff;
+}
+
+.tagstrip-track {
+  animation: scrollTags 26s linear infinite;
+}
+.tagstrip-track:hover {
+  animation-play-state: paused;
+}
+@keyframes scrollTags {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
